@@ -1,7 +1,6 @@
 package Model;
 
 import java.util.List;
-import java.util.Random;
 
 public class OrderModel {
     private List<String> ingredients;

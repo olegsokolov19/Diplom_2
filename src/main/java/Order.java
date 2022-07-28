@@ -2,15 +2,12 @@ import Model.OrderModel;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 
 public class Order extends Specification {
-
-    private List<String> ingredients;
 
     public Order() {
     }
