@@ -59,8 +59,8 @@ public class CreateOrderTest {
     }
 
     @Test
-    @DisplayName("Создание заказа с авторизацией и без ингредиентов")
-    @Description("Создание заказа с авторизацией и без ингредиентов. Возвращает 500 Internal Server Error")
+    @DisplayName("Создание заказа с невалидным хэшем ингредиента")
+    @Description("Создание заказа с невалидным хэшем ингредиента. Возвращает 500 Internal Server Error")
     public void createOrderWithIncorrectIngredients() {
         Response resp = order.createOrder(new OrderModel(order.getRandomIngredients(List.of("61c23vf001bdaaa70"))), token);
 
