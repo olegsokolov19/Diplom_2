@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: LoginUserTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.809 s <<< FAILURE! - in LoginUserTest
+loginWithoutName(LoginUserTest)  Time elapsed: 1.843 s  <<< FAILURE!
+java.lang.AssertionError: expected:<401> but was:<200>
+	at LoginUserTest.loginWithoutName(LoginUserTest.java:82)
+

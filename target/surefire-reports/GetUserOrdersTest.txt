@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: GetUserOrdersTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.664 s <<< FAILURE! - in GetUserOrdersTest
+getUserOrdersWithFiveOrders(GetUserOrdersTest)  Time elapsed: 7.455 s  <<< FAILURE!
+java.lang.AssertionError: expected:<5> but was:<18977>
+	at GetUserOrdersTest.getUserOrdersWithFiveOrders(GetUserOrdersTest.java:65)
+
+getUserOrdersWithoutOrders(GetUserOrdersTest)  Time elapsed: 2.202 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<18977>
+	at GetUserOrdersTest.getUserOrdersWithoutOrders(GetUserOrdersTest.java:40)
+

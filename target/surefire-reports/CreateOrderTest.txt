@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: CreateOrderTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.524 s <<< FAILURE! - in CreateOrderTest
+createOrderWithIncorrectIngredients(CreateOrderTest)  Time elapsed: 1.676 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500> but was:<400>
+	at CreateOrderTest.createOrderWithIncorrectIngredients(CreateOrderTest.java:67)
+
+createOrderWithoutAuthorization(CreateOrderTest)  Time elapsed: 1.69 s  <<< FAILURE!
+java.lang.AssertionError: expected:<401> but was:<200>
+	at CreateOrderTest.createOrderWithoutAuthorization(CreateOrderTest.java:47)
+
