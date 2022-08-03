@@ -9,6 +9,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class GetUserOrdersTest {
@@ -39,7 +40,6 @@ public class GetUserOrdersTest {
         assertEquals(expectedOrders, resp.path("orders"));
         assertEquals(expectedTotal, resp.path("total"));
         assertEquals(expectedTotalToday, resp.path("totalToday"));
-
     }
 
     @Test
@@ -64,6 +64,16 @@ public class GetUserOrdersTest {
         assertEquals(expectedOrders, resp.path("orders.number"));
         assertEquals(expectedTotal, resp.path("total"));
         assertEquals(expectedTotalToday, resp.path("totalToday"));
+    }
+
+    @Test
+    @DisplayName("Получение заказов пользователя без авторизации")
+    @Description("Получение заказов пользователя без авторизации. Возвращает 401 Unauthorized")
+    public void getUserOrdersWithoutAuthorization() {
+        Response resp = order.gerUserOrders(null);
+
+        assertEquals(false, resp.path("success"));
+        assertEquals(SC_UNAUTHORIZED, resp.statusCode());
     }
 
 }

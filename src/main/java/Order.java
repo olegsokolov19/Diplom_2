@@ -55,13 +55,22 @@ public class Order extends Specification {
 
     @Step("Получение заказов определённого пользователя")
     public Response gerUserOrders(String token) {
-        token = token.split(" ")[1];
-        return given()
-                .spec(setRequestSpecification())
-                .auth().oauth2(token)
-                .get("/api/orders")
-                .then()
-                .extract()
-                .response();
+        if (token != null) {
+            token = token.split(" ")[1];
+            return given()
+                    .spec(setRequestSpecification())
+                    .auth().oauth2(token)
+                    .get("/api/orders")
+                    .then()
+                    .extract()
+                    .response();
+        } else {
+            return given()
+                    .spec(setRequestSpecification())
+                    .get("/api/orders")
+                    .then()
+                    .extract()
+                    .response();
+        }
     }
 }
